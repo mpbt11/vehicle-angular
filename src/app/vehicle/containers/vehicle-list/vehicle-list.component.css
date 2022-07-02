@@ -1,0 +1,18 @@
+.btn-cadastrar {
+  padding: 8px 32px;
+  background: #1FA57C;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.btn-cadastrar:hover{
+  background: #064b36;
+}

@@ -1,11 +1,11 @@
 <table class="table table-striped">
   <thead>
-    <br />
-    <button type="button" class="btn btn-success" (click)="facade.accessForm()">
+    <br>
+    <button type="button" class="btn btn-cadastrar btn-success" (click)="facade.accessForm()">
       cadastrar
     </button>
-    <br />
-    <tr>
+    <br>
+    <tr class="text-center">
       <th scope="col">Código</th>
       <th scope="col">Placa</th>
       <th scope="col">Chassi</th>
@@ -13,11 +13,11 @@
       <th scope="col">Modelo</th>
       <th scope="col">Marca</th>
       <th scope="col">Ano</th>
-      <th class="text-center" scope="col">Ações</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of facade.list">
+    <tr class="text-center" *ngFor="let item of facade.list">
       <th scope="row">{{ item.id_vehicles }}</th>
       <td>{{ item.placa }}</td>
       <td>{{ item.chassi }}</td>
