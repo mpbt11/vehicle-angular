@@ -1,0 +1,93 @@
+<div class="d-flex justify-content-center align-items-center">
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="placa">Placa</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="placa"
+        id="placa"
+        placeholder="ex: ABC-123"
+        maxlength="7"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="chassi">Chassi</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="chassi"
+        id="chassi"
+        placeholder="ex: 12345678912345678"
+        maxlength="17"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="renavam">Renavam</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="renavam"
+        id="renavam"
+        placeholder="ex: 12345678912"
+        maxlength="11"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="modelo">Modelo</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="modelo"
+        id="modelo"
+        placeholder="ex: Gol 1.0 Trendline"
+        maxlength="20"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="marca">Marca</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="marca"
+        id="marca"
+        placeholder="volkswagen"
+        maxlength="20"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="ano">Ano</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="ano"
+        id="ano"
+        placeholder="2022"
+        maxlength="4"
+      />
+    </div>
+
+    <br>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="save()"
+      [disabled]="!form.valid"
+    >
+      Salvar
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-warning"
+      (click)="cancel()"
+    >
+      Cancelar
+    </button>
+  </form>
+</div>

@@ -1,0 +1,52 @@
+<table class="table table-striped">
+  <thead>
+    <br />
+    <button type="button" class="btn btn-success" (click)="facade.accessForm()">
+      cadastrar
+    </button>
+    <br />
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Placa</th>
+      <th scope="col">Chassi</th>
+      <th scope="col">Renavam</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Ano</th>
+      <th class="text-center" scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of facade.list">
+      <th scope="row">{{ item.id_vehicles }}</th>
+      <td>{{ item.placa }}</td>
+      <td>{{ item.chassi }}</td>
+      <td>{{ item.renavam }}</td>
+      <td>{{ item.modelo }}</td>
+      <td>{{ item.marca }}</td>
+      <td>{{ item.ano }}</td>
+      <td class="text-center">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic mixed styles example"
+        >
+          <button
+            type="button"
+            class="btn btn-warning"
+            (click)="accessForm(item.id_vehicles)"
+          >
+            Editar
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="facade.delete(item.id_vehicles)"
+          >
+            Excluir
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
