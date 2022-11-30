@@ -23,7 +23,7 @@ export class VehicleApi {
   }
 
   update(vehicle: Vehicle) {
-    return this.httpClient.put(`${this.url}/${vehicle.id_vehicles}`, vehicle);
+    return this.httpClient.put(`${this.url}/${vehicle.id}`, vehicle);
   }
 
   selectById(id_vehicles: number) {

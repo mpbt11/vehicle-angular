@@ -1,11 +1,13 @@
-export interface Vehicle {
-  id_vehicles: number;
-  placa: string;
-  chassi: string;
-  renavam: string;
-  modelo: string;
-  marca: string;
-  ano: string;
+export class Vehicle {
+  constructor(
+    public id: number,
+    public placa: string,
+    public chassi: string,
+    public renavam: string,
+    public modelo: string,
+    public marca: string,
+    public ano: string
+  ) {}
 }
 
 export interface VehiclesResponse {

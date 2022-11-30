@@ -17,8 +17,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="text-center" *ngFor="let item of facade.list">
-      <th scope="row">{{ item.id_vehicles }}</th>
+    <tr class="text-center" *ngFor="let item of facade.vehicles$ | async">
+      <th scope="row">{{ item.id }}</th>
       <td>{{ item.placa }}</td>
       <td>{{ item.chassi }}</td>
       <td>{{ item.renavam }}</td>
@@ -34,14 +34,14 @@
           <button
             type="button"
             class="btn btn-warning"
-            (click)="accessForm(item.id_vehicles)"
+            (click)="accessForm(item.id)"
           >
             Editar
           </button>
           <button
             type="button"
             class="btn btn-danger"
-            (click)="facade.delete(item.id_vehicles)"
+            (click)="facade.delete(item.id)"
           >
             Excluir
           </button>
